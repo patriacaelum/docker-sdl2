@@ -1,12 +1,12 @@
 # Base image
-FROM ubuntu:latest
+FROM archlinux:latest
 
 # Maintainer info
 MAINTAINER patriacaelum <austin@moroses.ca>
 
 # Update and install dependencies
-RUN apt update
-RUN apt install -y \
+RUN pacman -Syu --noconfirm
+RUN pacman -S --noconfirm \
     gcc \
     g++ \
     libsdl2-dev \
