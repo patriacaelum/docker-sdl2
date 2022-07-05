@@ -4,6 +4,9 @@ FROM archlinux:latest
 # Maintainer info
 MAINTAINER patriacaelum <austin@moroses.ca>
 
+# Set environment variables
+ENV TERM xterm-256color
+
 # Update and install dependencies
 RUN pacman -Syu --noconfirm
 RUN pacman -S --noconfirm \
